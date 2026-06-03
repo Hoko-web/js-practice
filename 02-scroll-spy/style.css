@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.toc {
+  position: fixed;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+}
+
+.toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-link {
+  display: block;
+  padding: 12px 24px;
+  color: #222;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+
+.toc-link.is-active {
+  color: #d33;
+  border-left-color: #d33;
+  font-weight: bold;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
