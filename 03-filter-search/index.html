@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-practice</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <input
+        type="search"
+        id="search"
+        class="search"
+        placeholder="キーワードで検索"
+      />
+      <div class="filters">
+        <button class="filter-btn is-active" type="button" data-filter="all">
+          すべて
+        </button>
+        <button class="filter-btn" type="button" data-filter="web">Web</button>
+        <button class="filter-btn" type="button" data-filter="design">
+          デザイン
+        </button>
+        <button class="filter-btn" type="button" data-filter="coding">
+          コーディング
+        </button>
+      </div>
+
+      <p class="count" id="count"></p>
+
+      <ul class="card-list" id="card-list">
+        <li class="card" data-category="web">
+          <h2 class="card-title">コーポレートサイト制作</h2>
+          <p class="card-category">Web</p>
+        </li>
+        <li class="card" data-category="web">
+          <h2 class="card-title">コーポレートサイト制作</h2>
+          <p class="card-category">Web</p>
+        </li>
+        <li class="card" data-category="design">
+          <h2 class="card-title">バナーのデザイン</h2>
+          <p class="card-category">デザイン</p>
+        </li>
+        <li class="card" data-category="design">
+          <h2 class="card-title">企業ロゴのデザイン</h2>
+          <p class="card-category">デザイン</p>
+        </li>
+        <li class="card" data-category="coding">
+          <h2 class="card-title">サイトのコーディング</h2>
+          <p class="card-category">コーディング</p>
+        </li>
+        <li class="card" data-category="coding">
+          <h2 class="card-title">LPのコーディング</h2>
+          <p class="card-category">コーディング</p>
+        </li>
+      </ul>
+
+      <p class="empty" id="empty" hidden>該当する実績がありません</p>
+    </div>
+  </body>
+</html>
