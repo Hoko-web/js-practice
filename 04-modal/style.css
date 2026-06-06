@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+}
+
+/* 開くボタン */
+#open-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* モーダル本体 */
+.modal {
+  width: min(90%, 400px); /* 画面が狭いと90%、広くても最大400px */
+  padding: 24px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* モーダルの背景（暗い部分）。dialog専用の擬似要素 */
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+#close-btn {
+  margin-top: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
