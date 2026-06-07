@@ -1,0 +1,46 @@
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+}
+
+.faq {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+/* 1項目 */
+.faq-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* 質問（クリックする見出し） */
+.faq-q {
+  padding: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none; /* デフォルトの三角マークを消す */
+  display: flex;
+  justify-content: space-between; /* 質問文と矢印を左右に分ける */
+  align-items: center;
+}
+.faq-q::-webkit-details-marker {
+  display: none; /* Safari用：デフォルト三角を消す */
+}
+
+/* 自前の矢印（+マーク） */
+.faq-q::after {
+  content: "+";
+  font-size: 20px;
+}
+/* 開いてるときは×（回転して見せる） */
+.faq-item[open] .faq-q::after {
+  content: "−";
+}
+
+/* 答え */
+.faq-a {
+  padding: 0 16px 16px;
+}
