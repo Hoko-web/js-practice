@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* 最初の画面（スクロールさせるため画面いっぱい） */
+.fv {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+}
+
+.cards {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 60px; /* 間隔を空けて1枚ずつ確認しやすく */
+}
+
+/* ===== フェードイン（JSとの約束） ===== */
+/* 初期状態：透明＋少し下にずらす。transition で変化を滑らかに */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+/* 表示状態：JSが is-show を付けたら元に戻る → ふわっと出る */
+.fade.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* アニメが苦手な人向けに動きを抑制（a11y） */
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    transition: none;
+  }
+}
