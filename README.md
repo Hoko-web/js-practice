@@ -13,3 +13,4 @@ HTML / CSS / JavaScript の基礎〜実務スキルを、小さく作りなが�
 | 04 | [モーダル（dialog）](./04-modal/) | ボタンで開くお知らせモーダル。閉じる3パターン（dialog + showModal + e.target判定） |
 | 05 | [アコーディオン（FAQ）](./05-accordion/) | クリックで開閉するFAQ。1つ開くと他は閉じる（details/summary + name + toggle） |
 | 06 | [スクロールでフェードイン](./06-fade-in/) | スクロールで要素をふわっと表示。AOSを使わず自作（IntersectionObserver + unobserve + CSS transition） |
+| 07 | [パーティクルテキスト（canvas）](./07-particle-text/) | canvasにドットを描く基礎から、文字がスクロールで飛び散る表現へ（4日連載・①ランダムドット） |
