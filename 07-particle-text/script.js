@@ -1,4 +1,4 @@
-// canvas基礎②(文字の位置を記憶して、その位置にドットを配置する)
+// canvas基礎③ばらばらのドットを文字の位置に集めるアニメ（requestAnimationFrame）
 
 const canvas = document.querySelector(".js-practice-canvas");
 // canvasを画面の大きさに合わせる
@@ -29,16 +29,28 @@ for (let y = 0; y < canvas.height; y += gap) {
     const alpha = data[index + 3]; // そこから４個目（R、G、B、AのA＝透明度）
     // 文字がある、値が１２８より大きいなら
     if (alpha > 128) {
-      // その場所を記憶する
-      dots.push({ x, y });
+      dots.push({
+        x: Math.random() * canvas.width, // 今の位置（最初はランダムにばら撒く）
+        y: Math.random() * canvas.height,
+        baseX: x, // ゴールの位置（文字の座標）
+        baseY: y,
+      });
     }
   }
 }
-// さっき描いた文字を一旦消す（この後にドットでかきなおす）
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-// 記憶していた位置に、ドットを打っていく
-ctx.fillStyle = "#fff";
-for (const dot of dots) {
-  // dotsから１個取り出して「dot」と呼ぶ
-  ctx.fillRect(dot.x, dot.y, 2, 2); // 引数（x座標, y座標, ドットの幅, ドットの高さ）
+
+function animate() {
+  // 前のコマを消す（毎フレーム描き直すため）
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#fff";
+  for (const dot of dots) {
+    // ゴールとの差の５％だけ近づける（だんだん減速して止まる）
+    dot.x += (dot.baseX - dot.x) * 0.05;
+    dot.y += (dot.baseY - dot.y) * 0.05;
+    ctx.fillRect(dot.x, dot.y, 2, 2); // 引数（x座標, y座標, ドットの幅, ドットの高さ）
+  }
+  // 次のコマでまた自分を呼ぶ（ループ）
+  requestAnimationFrame(animate);
 }
+// 最初の一回を起動
+animate();
