@@ -1,4 +1,4 @@
-// canvas基礎③ばらばらのドットを文字の位置に集めるアニメ（requestAnimationFrame）
+// canvas基礎④スクロール連動で、散らばったり、文字になったり
 
 const canvas = document.querySelector(".js-practice-canvas");
 // canvasを画面の大きさに合わせる
@@ -30,24 +30,26 @@ for (let y = 0; y < canvas.height; y += gap) {
     // 文字がある、値が１２８より大きいなら
     if (alpha > 128) {
       dots.push({
-        x: Math.random() * canvas.width, // 今の位置（最初はランダムにばら撒く）
-        y: Math.random() * canvas.height,
-        baseX: x, // ゴールの位置（文字の座標）
+        baseX: x,
         baseY: y,
+        scatterX: Math.random() * canvas.width, // ランダムに散らばる
+        scatterY: Math.random() * canvas.height,
       });
     }
   }
 }
 
 function animate() {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = Math.min(window.scrollY / maxScroll, 1);
   // 前のコマを消す（毎フレーム描き直すため）
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = "#fff";
   for (const dot of dots) {
-    // ゴールとの差の５％だけ近づける（だんだん減速して止まる）
-    dot.x += (dot.baseX - dot.x) * 0.05;
-    dot.y += (dot.baseY - dot.y) * 0.05;
-    ctx.fillRect(dot.x, dot.y, 2, 2); // 引数（x座標, y座標, ドットの幅, ドットの高さ）
+    // 文字の位置（base）と散る位置（scatter） スクロールした分だけドットを文字の位置から散る位置へ移動させる
+    const x = dot.baseX + (dot.scatterX - dot.baseX) * progress;
+    const y = dot.baseY + (dot.scatterY - dot.baseY) * progress;
+    ctx.fillRect(x, y, 2, 2); // 引数（x座標, y座標, ドットの幅, ドットの高さ）
   }
   // 次のコマでまた自分を呼ぶ（ループ）
   requestAnimationFrame(animate);
