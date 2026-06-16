@@ -37,7 +37,7 @@ body {
   font-size: 44px;
   padding: 40px;
 }
-
+/* 視差効果を減らす設定だった場合、フェードではなく、一瞬で切り替わるように */
 @media (prefers-reduced-motion: reduce) {
   .preloader {
     transition-duration: 0.01ms;
