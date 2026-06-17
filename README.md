@@ -15,3 +15,4 @@ HTML / CSS / JavaScript の基礎〜実務スキルを、小さく作りなが�
 | 06 | [スクロールでフェードイン](./06-fade-in/) | スクロールで要素をふわっと表示。AOSを使わず自作（IntersectionObserver + unobserve + CSS transition） |
 | 07 | [パーティクルテキスト（canvas）](./07-particle-text/) | スクロールで「canvas」の文字が飛び散る／戻るパーティクル演出。canvas基礎〜線形補間まで4日連載で実装（`getImageData` + `requestAnimationFrame` + スクロール進捗×lerp） |
 | 08 | [プリローダー（ローディング画面）](./08-preloader/) | 0→100%カウント後、黒幕がフェードアウトして中身が出る演出（setInterval + transitionend + remove） |
+| 09 | [3Dチルトカード（マウス追従）](./09-tilt-card/) | マウスの位置に合わせてカードが3Dで傾く演出。すりガラス風・複数対応（mousemove + getBoundingClientRect + transform + perspective） |
