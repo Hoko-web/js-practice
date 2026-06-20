@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.stats {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  color: #fff;
+  background:
+    radial-gradient(circle at 30% 20%, #1e3a8a, transparent 50%),
+    radial-gradient(circle at 70% 80%, #6d28d9, transparent 50%), #06060f;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat__num {
+  display: block;
+  font-size: 81px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(135deg, #fff, #a5b4fc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.stat__label {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
