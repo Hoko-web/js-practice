@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-practice</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a href="#" class="header__logo">HOKO</a>
+        <button
+          class="hamburger js-hamburger"
+          type="button"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          aria-controls="drawer"
+        >
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="drawer js-drawer" id="drawer">
+      <nav class="drawer__nav">
+        <ul class="drawer__nav-list">
+          <li class="drawer__nav-item"><a href="home">Home</a></li>
+          <li class="drawer__nav-item"><a href="about">About</a></li>
+          <li class="drawer__nav-item"><a href="works">Works</a></li>
+          <li class="drawer__nav-item"><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="content">
+      <h1>Hoko</h1>
+    </main>
+  </body>
+</html>
