@@ -1,0 +1,78 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variable" as *;
+
+.p-fv {
+  position: relative;
+  height: 100svh;
+}
+
+.p-fv__bg {
+  position: absolute;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.p-fv__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.p-fv__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.p-fv__lead {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: $font-en;
+
+  @include mq(pc) {
+    font-size: 24px;
+  }
+}
+
+.p-fv__title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 32px;
+
+  span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+
+  &.is-show span {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @include mq(pc) {
+    font-size: 40px;
+    padding-bottom: 40px;
+  }
+}
+// 視差効果を減らす設定ONの場合アニメーションしないように
+@media (prefers-reduced-motion: reduce) {
+  .p-fv__title span {
+    opacity: 1; // 最初から表示
+    transform: none; // 動かさない
+    transition: none; // アニメーションなし
+  }
+}

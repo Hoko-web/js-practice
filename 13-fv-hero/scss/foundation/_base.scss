@@ -1,0 +1,21 @@
+@use "mixin" as *;
+@use "variable" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-ja;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-text-main;
+  background-color: $color-bg-main;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

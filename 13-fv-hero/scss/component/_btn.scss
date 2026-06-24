@@ -1,0 +1,30 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variable" as *;
+
+.c-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: $font-en;
+  font-weight: 700;
+  color: $color-text-main;
+  background: $color-bg-main;
+  border: 1px solid $color-bg-main;
+  border-radius: 999px;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+
+  @include mq(pc) {
+    padding: 16px 32px;
+  }
+
+  &:hover {
+    color: $color-bg-main;
+    background-color: transparent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-bg-main;
+    outline-offset: 2px;
+  }
+}
