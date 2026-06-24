@@ -1,0 +1,46 @@
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
+
+.c-card {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  touch-action: none;
+  user-select: none;
+}
+
+.c-card__img {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+}
+
+.c-card__body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+.c-card__name {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: $font-en;
+}
+
+.c-card__text {
+  font-size: 16px;
+  opacity: 0.9;
+}

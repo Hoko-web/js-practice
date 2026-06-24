@@ -1,0 +1,16 @@
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
+
+.p-swipe {
+  display: flex;
+  min-height: 100svh;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-bg-base;
+}
+
+.p-swipe__cards {
+  position: relative;
+  width: 320px;
+  height: 460px;
+}
