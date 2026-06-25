@@ -21,3 +21,4 @@ HTML / CSS / JavaScript の基礎〜実務スキルを、小さく作りなが�
 | 12 | [ハンバーガーメニュー＋ドロワー](./12-hamburger-drawer/) | スマホ定番の開閉ナビ。閉じる4トリガー・スクロール固定・aria同期のアクセシブル実装（aria-expanded/aria-label + e.target判定 + 状態の関数化） |
 | 13 | [FVヒーロー＋スプリットテキスト](./13-fv-hero/) | 背景画像のFVを土台から実装＋見出しを1文字ずつ表示するJS演出。HTML/CSSにも本格着手（FLOCSS設計 + 動的DOM生成 + stagger + a11y/perf） |
 | 14 | [スワイプカード（Tinder風）](./14-swipe-cards/) | カードをドラッグで左右に弾いて次々めくるUI。pointerドラッグ＋しきい値判定＋連続スワイプ（pointer events + setPointerCapture + transitionend + touch-action） |
+| 15 | [スクロール連動マーキー](./15-marquee/) | 文字の行が左右交互に無限スクロール、スクロールで加速して戻る背景演出（requestAnimationFrame + cloneNode無限ループ + スクロール速度の減衰） |

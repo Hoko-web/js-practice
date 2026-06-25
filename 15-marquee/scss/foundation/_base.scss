@@ -1,0 +1,17 @@
+@use "variable" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-en;
+  font-weight: 900;
+  line-height: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
