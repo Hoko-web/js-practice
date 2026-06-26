@@ -1,0 +1,63 @@
+@use "../foundation/variables" as *;
+
+.p-fv {
+  position: relative;
+  overflow: hidden;
+  height: 100svh;
+}
+
+.p-fv__bg {
+  position: absolute;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  height: 160%;
+  object-fit: cover;
+}
+.p-fv__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 15, 0.55);
+}
+
+.p-fv__back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.p-fv__inner {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.p-fv__lead {
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  opacity: 0.8;
+}
+.p-fv__title {
+  font-size: 88px;
+  font-weight: 900;
+}
+
+.p-content {
+  min-height: 100vh;
+  padding: 80px;
+}
+
+.spacer {
+  height: 100vh;
+}
