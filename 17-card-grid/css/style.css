@@ -765,7 +765,11 @@ img {
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.c-card.is-show {
+  opacity: 1;
 }
 .c-card:hover {
   transform: translateY(-6px);
@@ -803,7 +807,7 @@ img {
 }
 
 .p-works {
-  padding: 80px 24px;
+  padding: 1080px 24px;
 }
 
 .p-works__title {

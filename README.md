@@ -23,3 +23,4 @@ HTML / CSS / JavaScript の基礎〜実務スキルを、小さく作りなが�
 | 14 | [スワイプカード（Tinder風）](./14-swipe-cards/) | カードをドラッグで左右に弾いて次々めくるUI。pointerドラッグ＋しきい値判定＋連続スワイプ（pointer events + setPointerCapture + transitionend + touch-action） |
 | 15 | [スクロール連動マーキー](./15-marquee/) | 文字の行が左右交互に無限スクロール、スクロールで加速して戻る背景演出（requestAnimationFrame + cloneNode無限ループ + スクロール速度の減衰） |
 | 16 | [パララックス](./16-parallax/) | スクロールで背景・透かし文字・見出しが別々の速さで動く奥行き演出（data-speed × scrollY → translateY） |
+| 17 | [カードグリッド（CSS Grid）](./17-card-grid/) | 画像カードをGridで並べ、スクロールで1枚ずつ順次フェードイン（CSS Grid + IntersectionObserver + stagger） |
