@@ -1,0 +1,49 @@
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
+
+.p-tabs {
+  max-width: 640px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.p-tabs__list {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.p-tabs__btn {
+  padding: 12px 24px;
+  font-family: $font-base;
+  font-size: 24px;
+  color: $color-text-sub; // 非アクティブは薄い色
+  cursor: pointer; // 指マーク出す（div,spanにクリック機能つけるとき）
+  border-bottom: 2px solid transparent; // アクティブで色がつく透明な下線
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+
+  &.is-active {
+    color: $color-accent;
+    border-bottom-color: $color-accent; // 透明下線に色つける
+  }
+}
+
+.p-tabs_panels {
+  padding: 32px 12px;
+}
+
+.p-tabs__panel {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.p-tabs__heading {
+  margin-bottom: 12px;
+  font-size: 32px;
+  font-weight: bold;
+}

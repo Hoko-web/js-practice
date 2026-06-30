@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-practice</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="p-tabs">
+        <!-- タブ -->
+        <div class="p-tabs__list">
+          <button class="p-tabs__btn js-tab is-active" type="button">
+            概要
+          </button>
+          <button class="p-tabs__btn js-tab" type="button">料金</button>
+          <button class="p-tabs__btn js-tab" type="button">アクセス</button>
+        </div>
+        <!-- パネル -->
+        <div class="p-tabs_panels">
+          <div class="p-tabs__panel js-panel is-active">
+            <h3 class="p-tabs__heading">概要</h3>
+            <p>サービスの概要です。</p>
+          </div>
+          <div class="p-tabs__panel js-panel is-active">
+            <h3 class="p-tabs__heading">料金</h3>
+            <p>料金プランの説明です。</p>
+          </div>
+          <div class="p-tabs__panel js-panel is-active">
+            <h3 class="p-tabs__heading">アクセス</h3>
+            <p>アクセス・地図の情報です。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+<!-- タブはbutton type butonで明示
+タブとパネルは順番で対応１番目のタブ→１番目のパネル-->

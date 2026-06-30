@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "variable";
+
+@mixin mq($breakpoints: pc) {
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
