@@ -24,3 +24,5 @@ HTML / CSS / JavaScript の基礎〜実務スキルを、小さく作りなが�
 | 15 | [スクロール連動マーキー](./15-marquee/) | 文字の行が左右交互に無限スクロール、スクロールで加速して戻る背景演出（requestAnimationFrame + cloneNode無限ループ + スクロール速度の減衰） |
 | 16 | [パララックス](./16-parallax/) | スクロールで背景・透かし文字・見出しが別々の速さで動く奥行き演出（data-speed × scrollY → translateY） |
 | 17 | [カードグリッド（CSS Grid）](./17-card-grid/) | 画像カードをGridで並べ、スクロールで1枚ずつ順次フェードイン（CSS Grid + IntersectionObserver + stagger） |
+| 18 | [タブUI（アクセシブル）](./18-tabs/) | クリック＋矢印キーで切り替わるWAI-ARIA準拠のタブUI（role=tablist/tab/tabpanel + aria-controls + ロービングtabindex + aria-selected同期） |
+| 19 | [画像比較スライダー（before/after）](./19-clip-path/) | 2枚の画像を仕切りのドラッグ＋矢印キーで見比べるUI（clip-path + pointer events + setPointerCapture + role=slider / aria-valuenow） |
