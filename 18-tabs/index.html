@@ -19,24 +19,70 @@
     <main>
       <section class="p-tabs">
         <!-- タブ -->
-        <div class="p-tabs__list">
-          <button class="p-tabs__btn js-tab is-active" type="button">
+        <div class="p-tabs__list" role="tablist" aria-label="サービス情報">
+          <button
+            class="p-tabs__btn js-tab is-active"
+            type="button"
+            role="tab"
+            id="tab-1"
+            aria-controls="panel-1"
+            aria-selected="true"
+            tabindex="0"
+          >
             概要
           </button>
-          <button class="p-tabs__btn js-tab" type="button">料金</button>
-          <button class="p-tabs__btn js-tab" type="button">アクセス</button>
+          <button
+            class="p-tabs__btn js-tab"
+            type="button"
+            role="tab"
+            id="tab-2"
+            aria-controls="panel-2"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            料金
+          </button>
+          <button
+            class="p-tabs__btn js-tab"
+            type="button"
+            role="tab"
+            id="tab-3"
+            aria-controls="panel-3"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            アクセス
+          </button>
         </div>
         <!-- パネル -->
-        <div class="p-tabs_panels">
-          <div class="p-tabs__panel js-panel is-active">
+        <div class="p-tabs__panels">
+          <div
+            class="p-tabs__panel js-panel is-active"
+            role="tabpanel"
+            id="panel-1"
+            aria-labelledby="tab-1"
+            tabindex="0"
+          >
             <h3 class="p-tabs__heading">概要</h3>
             <p>サービスの概要です。</p>
           </div>
-          <div class="p-tabs__panel js-panel is-active">
+          <div
+            class="p-tabs__panel js-panel"
+            role="tabpanel"
+            id="panel-2"
+            aria-labelledby="tab-2"
+            tabindex="0"
+          >
             <h3 class="p-tabs__heading">料金</h3>
             <p>料金プランの説明です。</p>
           </div>
-          <div class="p-tabs__panel js-panel is-active">
+          <div
+            class="p-tabs__panel js-panel"
+            role="tabpanel"
+            id="panel-3"
+            aria-labelledby="tab-3"
+            tabindex="0"
+          >
             <h3 class="p-tabs__heading">アクセス</h3>
             <p>アクセス・地図の情報です。</p>
           </div>
@@ -45,5 +91,3 @@
     </main>
   </body>
 </html>
-<!-- タブはbutton type butonで明示
-タブとパネルは順番で対応１番目のタブ→１番目のパネル-->
