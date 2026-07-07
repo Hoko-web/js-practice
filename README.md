@@ -27,3 +27,4 @@ HTML / CSS / JavaScript の基礎〜実務スキルを、小さく作りなが�
 | 18 | [タブUI（アクセシブル）](./18-tabs/) | クリック＋矢印キーで切り替わるWAI-ARIA準拠のタブUI（role=tablist/tab/tabpanel + aria-controls + ロービングtabindex + aria-selected同期） |
 | 19 | [画像比較スライダー（before/after）](./19-clip-path/) | 2枚の画像を仕切りのドラッグ＋矢印キーで見比べるUI（clip-path + pointer events + setPointerCapture + role=slider / aria-valuenow） |
 | 20 | [フェードで開くドロワーメニュー](./20-fade-drawer/) | ハンバーガー開閉のドロワーを visibility+opacity で実装（フェードと操作可否の両立・4つの閉じトリガー・aria同期・Escキー） |
+| 21 | [お客様の声スライダー（Swiper）](./21-swiper/) | Swiper（CDN）でカルーセル実装。自動送り・ページネーション・前後矢印・レスポンシブ表示枚数（new Swiper + breakpoints + loop） |
