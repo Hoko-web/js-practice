@@ -1,0 +1,23 @@
+// =====================================
+// Font
+// =====================================
+$font-family-base: "Inter", sans-serif;
+$font-family-jp: "Noto Sans JP", sans-serif;
+
+// =====================================
+// Color
+// =====================================
+$color-text-main: #1a1a1a;
+$color-text-sub: #888;
+$color-accent: #0f766e;
+$color-tag-bg: #e7f5f3;
+$color-border: #e5e5e5;
+$color-bg: #fff;
+
+// =====================================
+// Breakpoint
+// =====================================
+$breakpoints: (
+  tb: 768px,
+  pc: 1024px,
+);
