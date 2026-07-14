@@ -29,3 +29,4 @@ HTML / CSS / JavaScript の基礎〜実務スキルを、小さく作りなが�
 | 20 | [フェードで開くドロワーメニュー](./20-fade-drawer/) | ハンバーガー開閉のドロワーを visibility+opacity で実装（フェードと操作可否の両立・4つの閉じトリガー・aria同期・Escキー） |
 | 21 | [お客様の声スライダー（Swiper）](./21-swiper/) | Swiper（CDN）でカルーセル実装。自動送り・ページネーション・前後矢印・レスポンシブ表示枚数（new Swiper + breakpoints + loop） |
 | 22 | [お知らせ一覧（もっと見る／閉じる）](./22-load-more/) | 一覧を最初は4件だけ表示し、Moreボタンで開閉するトグルUI。閉じてもボタンがズレないよう高さを完全に0まで畳む（grid-template-rows 1fr⇄0fr + classList.toggle + is-collapsed） |
+| 23 | [料金プラン表（月額／年額トグル）](./23-pricing/) | 3プラン比較＋真ん中をおすすめ強調。トグルで月額⇄年額を出し分け（CSS Grid等高揃え + dataset[term]で価格切替 + is-active切替） |
