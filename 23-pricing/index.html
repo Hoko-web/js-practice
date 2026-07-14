@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-practice</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&family=Manrope:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="p-pricing">
+        <div class="p-pricing__inner">
+          <h1 class="p-pricing__title">料金プラン</h1>
+          <div class="p-pricing__switch js-price-toggle">
+            <button
+              class="p-pricing__switch-btn is-active"
+              type="button"
+              data-term="monthly"
+            >
+              月額
+            </button>
+            <button
+              class="p-pricing__switch-btn"
+              type="button"
+              data-term="yearly"
+            >
+              年額
+            </button>
+          </div>
+          <ul class="p-pricing__cards">
+            <li class="p-pricing__card">
+              <h2 class="p-pricing__plan">Light</h2>
+              <p class="p-pricing__price">
+                <span
+                  class="p-pricing__amount js-price"
+                  data-monthly="980"
+                  data-yearly="820"
+                  >980</span
+                >
+                <span class="p-pricing__unit">円/月</span>
+              </p>
+              <ul class="p-pricing__features">
+                <li class="p-pricing__feature">メールが使える</li>
+                <li class="p-pricing__feature">15回まで無料</li>
+                <li class="p-pricing__feature">サポート体制あり</li>
+              </ul>
+              <a href="#" class="p-pricing__button">申し込む</a>
+            </li>
+
+            <li class="p-pricing__card p-pricing__card--recommend">
+              <span class="p-pricing__badge">おすすめ</span>
+              <h2 class="p-pricing__plan">Standard</h2>
+              <p class="p-pricing__price">
+                <span
+                  class="p-pricing__amount js-price"
+                  data-monthly="1980"
+                  data-yearly="1650"
+                  >1980</span
+                >
+                <span class="p-pricing__unit">円/月</span>
+              </p>
+              <ul class="p-pricing__features">
+                <li class="p-pricing__feature">ストレージ5GB</li>
+                <li class="p-pricing__feature">メンバー3人</li>
+                <li class="p-pricing__feature">メールサポート</li>
+              </ul>
+              <a href="#" class="p-pricing__button">申し込む</a>
+            </li>
+
+            <li class="p-pricing__card">
+              <h2 class="p-pricing__plan">Pro</h2>
+              <p class="p-pricing__price">
+                <span
+                  class="p-pricing__amount js-price"
+                  data-monthly="3980"
+                  data-yearly="3320"
+                  >3980</span
+                >
+                <span class="p-pricing__unit">円/月</span>
+              </p>
+              <ul class="p-pricing__features">
+                <li class="p-pricing__feature">ストレージ200GB</li>
+                <li class="p-pricing__feature">メンバー無制限</li>
+                <li class="p-pricing__feature">電話サポート</li>
+                <li class="p-pricing__feature">アクセス解析</li>
+              </ul>
+              <a href="#" class="p-pricing__button">申し込む</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

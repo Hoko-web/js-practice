@@ -1,0 +1,147 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variable" as *;
+
+.p-pricing {
+  padding: 80px 0;
+}
+
+.p-pricing__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.p-pricing__title {
+  margin-bottom: 32px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.p-pricing__switch {
+  display: flex;
+  gap: 12px;
+  width: fit-content;
+  margin: 0 auto 48px;
+  padding: 8px;
+  background: $color-accent-bg;
+  border-radius: 999px;
+}
+
+.p-pricing__switch-btn {
+  padding: 8px 24px;
+  font-weight: 700;
+  color: $color-text-sub;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+
+  &.is-active {
+    color: #fff;
+    background: $color-accent;
+  }
+}
+
+.p-pricing__cards {
+  display: grid;
+  gap: 24px;
+
+  @include mq(pc) {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+}
+
+.p-pricing__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 28px;
+  background: $color-card-bg;
+  border: 1px solid $color-border;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 4%);
+}
+
+.p-pricing__card--recommend {
+  border: 2px solid $color-accent;
+
+  &.p-pricing__button {
+    color: #fff;
+    background: $color-accent;
+  }
+  @include mq(pc) {
+    transform: scale(1.05);
+  }
+}
+
+.p-pricing__badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  background: $color-accent;
+  border-radius: 999px;
+}
+
+.p-pricing__plan {
+  font-family: $font-en;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.p-pricing__price {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.p-pricing__amount {
+  font-family: $font-en;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.p-pricing__unit {
+  margin-left: 4px;
+  color: $color-text-sub;
+}
+
+.p-pricing__features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.p-pricing__feature {
+  position: relative;
+  padding-left: 26px;
+}
+
+.p-pricing__button {
+  display: block;
+  margin-top: auto;
+  padding: 14px;
+  font-weight: 700;
+  text-align: center;
+  color: $color-accent;
+  background: #fff;
+  border: 1px solid $color-accent;
+  border-radius: 8px;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+
+  &:hover {
+    color: #fff;
+    background: $color-accent;
+  }
+}
