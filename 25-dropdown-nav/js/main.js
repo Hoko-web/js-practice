@@ -17,6 +17,8 @@
 
     // toggleがなかったら、return
     if (!toggle) return;
+    // マウスがこのliに乗った瞬間、開きっぱなしのパネルを閉じる
+    item.addEventListener("mouseenter", closeAll);
 
     toggle.addEventListener("click", () => {
       // is-Open = クリックされた時点で、このliにis-openがついているかどうか
