@@ -1,0 +1,98 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variable" as *;
+
+.p-header {
+  background-color: $color-bg;
+  box-shadow: 0 2px 8px rgb(0, 0, 0, 0.08);
+}
+
+.p-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1080px;
+  height: 72px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.p-header__logo {
+  font-family: $font-en;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.p-header__list {
+  display: flex;
+  align-items: center;
+}
+
+.p-header__item {
+  position: relative;
+}
+
+.p-header__link,
+.p-header__toggle {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 8px 16px;
+  font-weight: 500;
+  color: $color-text-main;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.p-header__toggle {
+  &::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+  }
+}
+
+.p-header__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 200px;
+  padding: 8px 0;
+  visibility: hidden;
+  background-color: $color-bg;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    visibility 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  .p-header__item:hover &,
+  .p-header__item.is-open & {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.p-header__dropdown-link {
+  display: block;
+  padding: 10px 16px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    color: $color-accent;
+    background-color: $color-bg-sub;
+  }
+}
