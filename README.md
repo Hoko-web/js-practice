@@ -31,3 +31,4 @@ HTML / CSS / JavaScript の基礎〜実務スキルを、小さく作りなが�
 | 22 | [お知らせ一覧（もっと見る／閉じる）](./22-load-more/) | 一覧を最初は4件だけ表示し、Moreボタンで開閉するトグルUI。閉じてもボタンがズレないよう高さを完全に0まで畳む（grid-template-rows 1fr⇄0fr + classList.toggle + is-collapsed） |
 | 23 | [料金プラン表（月額／年額トグル）](./23-pricing/) | 3プラン比較＋真ん中をおすすめ強調。トグルで月額⇄年額を出し分け（CSS Grid等高揃え + dataset[term]で価格切替 + is-active切替） |
 | 24 | [ホバーで詳細が出る実績カード](./24-hover-card/) | 実績ギャラリーにホバーで画像ズーム＋暗幕オーバーレイ。CSSのみ（親:hover連動 + overflow:hidden×scale + object-fit + Grid） |
+| 25 | [ドロップダウンナビ](./25-dropdown-nav/) | グロナビの子メニューをホバー＋クリックで開閉。外側クリック・Escで閉じる（visibility+opacity+translateY + closeAll→addの型 + closest外側判定 + aria-expanded同期） |
